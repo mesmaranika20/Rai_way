@@ -3,8 +3,8 @@
 from datetime import datetime
 from http.server import BaseHTTPRequestHandler
 from urllib.parse import urlparse
-from controllers.auth import register_user, login_user
-from controllers.payroll import get_all_payroll, create_payroll
+# from controllers.auth import register_user, login_user
+# from controllers.payroll import get_all_payroll, create_payroll
 
 
 
@@ -33,13 +33,13 @@ from controllers.staff import (
 )
 
 
-from controllers.auth import (
-    get_all_auth,
-    get_auth,
-    create_auth,
-    update_auth,
-    delete_auth
-)
+# 0from controllers.auth import (
+#     get_all_auth,
+#     get_auth,
+#     create_auth,
+#     update_auth,
+#     delete_auth
+# )
 
 from core.static import serve_static
 from core.responses import send_404
@@ -108,11 +108,11 @@ class RailwayRouter(BaseHTTPRequestHandler):
             staff_id = int(path.split("/")[-1])
             return get_staff(self, staff_id)
         
-        if path == "/api/auth/register":
-         return register_user(self)
+        # if path == "/api/auth/register":
+        #  return register_user(self)
 
-        if path == "/api/auth/login":
-         return login_user(self)
+        # if path == "/api/auth/login":
+        #  return login_user(self)
 
         
         return send_404(self)

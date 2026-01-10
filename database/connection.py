@@ -50,28 +50,28 @@ def init_database():
         )
     """)
 
-    conn.execute("""
-        CREATE TABLE IF NOT EXISTS users (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    username TEXT UNIQUE,
-    password TEXT,
-    created_at TEXT
-);
+# #     conn.execute("""
+# #         CREATE TABLE IF NOT EXISTS users (
+# #     id INTEGER PRIMARY KEY AUTOINCREMENT,
+# #     username TEXT UNIQUE,
+# #     password TEXT,
+# #     created_at TEXT
+# # );
 
-        )
-    """)
+# #         )
+# #     """)
 
-    conn.execute("""
-CREATE TABLE IF NOT EXISTS payroll (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    staff_id INTEGER,
-    salary REAL,
-    month TEXT,
-    created_at TEXT
-);
+#     conn.execute("""
+# CREATE TABLE IF NOT EXISTS payroll (
+#     id INTEGER PRIMARY KEY AUTOINCREMENT,
+#     staff_id INTEGER,
+#     salary REAL,
+#     month TEXT,
+#     created_at TEXT
+# );
 
-        )
-    """)
+#         )
+#     """)
 
     conn.commit()
     conn.close()
